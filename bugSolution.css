@@ -1,0 +1,17 @@
+The solution involves understanding CSS specificity and the cascading order. The provided CSS might not produce the intended output because of the inheritance mechanism.  Here's the corrected version:
+
+```css
+div {
+  color: blue;
+}
+
+p {
+  color: red;
+}
+
+div p {
+  color: green !important; /* Use !important to forcefully override */
+}
+```
+
+By adding `!important`, we forcefully override the inherited and less specific styles.  While using `!important` should be done sparingly, it's a solution in cases where specificity isn't sufficient to achieve the desired effect.  A better, more maintainable solution would be to restructure the CSS to avoid such conflicts.
